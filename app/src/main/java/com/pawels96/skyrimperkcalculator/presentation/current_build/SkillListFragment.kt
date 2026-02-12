@@ -50,7 +50,7 @@ class SkillListFragment : BottomSheetDialogFragment() {
     override fun onStart() {
         super.onStart()
         dialog?.let {
-            val bottomSheet = it.findViewById<View>(R.id.design_bottom_sheet)
+            val bottomSheet = it.findViewById<View>(com.google.android.material.R.id.design_bottom_sheet)
             bottomSheet?.let { sheet ->
                 val behavior = BottomSheetBehavior.from(sheet)
                 behavior.state = BottomSheetBehavior.STATE_EXPANDED
