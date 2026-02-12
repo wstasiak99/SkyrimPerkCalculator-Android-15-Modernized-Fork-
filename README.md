@@ -1,10 +1,33 @@
-# Perk Calculator for Skyrim
-Android app which lets you browse skill trees, design and save your character builds in The Elder Scrolls V : Skyrim. Supports perk overhaul mods, such as Ordinator and Vokrii. 
+# Skyrim Perk Calculator (Android 15 Modernized Fork)
 
-<a href='https://play.google.com/store/apps/details?id=com.pawels96.skyrimperkcalculator&hl=pl&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
+[![Android SDK](https://img.shields.io/badge/SDK-35%20%28Android%2015%29-green.svg)](https://developer.android.com/about/versions/15)
+[![Java](https://img.shields.io/badge/Java-17-orange.svg)](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+[![Gradle](https://img.shields.io/badge/Gradle-8.14.4-blue.svg)](https://gradle.org/releases/)
 
-<a href="https://imgur.com/H2InFQj"><img src="https://i.imgur.com/H2InFQj.jpg" title="source: imgur.com" width="300" /></a>
-<a href="https://imgur.com/gvIzh7A"><img src="https://i.imgur.com/gvIzh7A.jpg" title="source: imgur.com" width="300" /></a>
-<a href="https://imgur.com/yQCwYxV"><img src="https://i.imgur.com/yQCwYxV.jpg" title="source: imgur.com" width="300" /></a>
-<a href="https://imgur.com/64958HV"><img src="https://i.imgur.com/64958HV.jpg" title="source: imgur.com" width="300" /></a>
-<a href="https://imgur.com/jmLZk2R"><img src="https://i.imgur.com/jmLZk2R.jpg" title="source: imgur.com" width="300" /></a>
+This is a modernized fork of the original [SkyrimPerkCalculator](https://github.com/PawelS96/SkyrimPerkCalculator) by @PawelS96. The original project was no longer buildable on modern Android Studio versions due to deprecated plugins and old Gradle configurations.
+
+**This version has been updated to run on Android 14 and 15 (target SDK 35).**
+
+## Key Modernization Changes
+
+To make this project buildable and stable in 2026, the following updates were implemented:
+
+- **Build System:** Migrated to **Gradle 8.14.4** with **Android Gradle Plugin 8.5.2**.
+- **Modern Java:** Project now requires **JDK 17** for compilation.
+- **Android 15 Support:** Updated `compileSdk` and `targetSdk` to **35**.
+- **Core Updates:**
+    - Centralized repository management in `settings.gradle`.
+    - Centralized plugin versions in root `build.gradle`.
+    - Enabled `buildConfig` generation (required by the app logic).
+    - Fixed Material Design resource paths (specifically `design_bottom_sheet` ID issues).
+- **Minimum Requirements:** Bumped `minSdk` to **26** (Android 8.0) to support modern libraries.
+
+## How to Build
+
+1. Clone this repository.
+2. Open the project in the latest **Android Studio (Ladybug or newer)**.
+3. Ensure your **Gradle JDK** is set to **Java 17** (Settings -> Build, Execution, Deployment -> Build Tools -> Gradle).
+4. Sync the project and run the `app` module.
+
+## License
+This project is licensed under the same terms as the original repository.
